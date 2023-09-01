@@ -9,7 +9,6 @@ const fetchuser = (req, res, next) =>{
     if(!token){
         res.status(401).json({error: "Please authenticate using the valid token"});
     }
-
     try {
         
         // Verify our token with the JWT_Secret code.
@@ -20,7 +19,7 @@ const fetchuser = (req, res, next) =>{
         next();
         
     } catch (error) {
-        res.status(401).json({error: "Please authenticate using th avalid token"});
+        res.status(401).json({error: "Please authenticate using the valid token"});
 
     }
 }
